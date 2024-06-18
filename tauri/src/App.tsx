@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { invoke } from "@tauri-apps/api";
 import { listen, UnlistenFn } from "@tauri-apps/api/event";
 
-import { ScreenVariantRed, type ViewModel } from '../../shared_types/generated/typescript/types/shared_types'
-
+import {
+  ScreenVariantRed,
+  type ViewModel,
+} from "shared_types/types/shared_types.ts";
 
 const initialState: ViewModel = {
   screen: new ScreenVariantRed(), // ??
@@ -50,6 +52,15 @@ function App() {
           >
             {"Decrement"}
           </button>
+          {
+            (() => {
+              if (view.screen instanceof ScreenVariantRed) {
+                return "Red"
+              } else {
+                return "Black"
+              }
+            })()
+          }
           <button
             className="button is-primary is-danger"
             onClick={() => {

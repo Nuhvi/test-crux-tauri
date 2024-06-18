@@ -13,7 +13,8 @@
   "dependencies": {
     "@tauri-apps/api": "^1.5.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "shared_types": "link:../shared_types/generated/typescript"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.5.6",
